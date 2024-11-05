@@ -3,7 +3,7 @@ name: Build(2.0.0_py3.9.12_cuda11.7.1_ubuntu22.04)
 env:
   BASE_IMAGE: "ubuntu:22.04"
 
-  PYTHON_VERSION: "3.9.12"
+  PYTHON_VERSION: "3.10.15"
 
   PYTORCH_VERSION: "2.0.0"
   PYTORCH_VERSION_SUFFIX: "+cu117"
@@ -13,7 +13,7 @@ env:
   TORCHAUDIO_VERSION_SUFFIX: "+cu117"
   PYTORCH_DOWNLOAD_URL: "https://download.pytorch.org/whl/cu117/torch_stable.html"
 
-  IMAGE_TAG: "2.0.0-py3.9.12-cuda11.7.1-ubuntu22.04"
+  IMAGE_TAG: "2.0.0-py3.10.15-cuda11.7.1-ubuntu22.04"
 
 on:
   push:
@@ -21,7 +21,7 @@ on:
       - main
     paths:
       - 'docker/ubuntu/**'
-      - '.github/workflows/docker_build_2.0.0_py3.9.12_cuda11.7.1_ubuntu22.04.yml'
+      - '.github/workflows/docker_build_2.0.0_py3.10.15_cuda11.7.1_ubuntu22.04.yml'
 
 jobs:
   build:
