@@ -1,7 +1,7 @@
 name: Build(2.0.0_py3.9.12_cuda11.7.1_ubuntu22.04)
 
 env:
-  BASE_IMAGE: "ubuntu:22.04"
+  BASE_IMAGE: "nvidia/cuda:11.7.1-cudnn8-devel-ubuntu22.04"
 
   PYTHON_VERSION: "3.10.15"
 
