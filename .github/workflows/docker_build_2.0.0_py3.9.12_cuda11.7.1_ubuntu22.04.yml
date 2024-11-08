@@ -16,12 +16,10 @@ env:
   IMAGE_TAG: "2.0.0-py3.10.15-cuda11.7.1-ubuntu22.04"
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'docker/ubuntu/**'
-      - '.github/workflows/docker_build_2.0.0_py3.10.15_cuda11.7.1_ubuntu22.04.yml'
+    schedule:
+        - cron: "20 * * * *"
+    watch:
+        types: [started]
 
 jobs:
   build:
