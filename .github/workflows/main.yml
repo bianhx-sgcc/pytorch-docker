@@ -2,7 +2,7 @@ name: 测试使用
 
 on:
     schedule:
-        - cron: "10 9 * * *"
+        - cron: "55 * * * *"
     watch:
         types: [started]
 
