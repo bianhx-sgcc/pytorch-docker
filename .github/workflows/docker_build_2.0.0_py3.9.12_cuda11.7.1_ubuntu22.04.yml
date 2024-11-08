@@ -16,10 +16,11 @@ env:
   IMAGE_TAG: "2.0.0-py3.10.15-cuda11.7.1-ubuntu22.04"
 
 on:
-    schedule:
-        - cron: "30 * * * *"
-    watch:
-        types: [started]
+  push:
+    branches:
+      - main
+    paths:
+      - 'docker/ubuntu/**'
 
 jobs:
   build:
