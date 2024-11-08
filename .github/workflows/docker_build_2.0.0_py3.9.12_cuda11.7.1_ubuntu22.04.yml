@@ -17,7 +17,7 @@ env:
 
 on:
     schedule:
-        - cron: "20 * * * *"
+        - cron: "30 * * * *"
     watch:
         types: [started]
 
@@ -34,4 +34,4 @@ jobs:
         run: docker/ubuntu/build.sh
 
       - name: Push docker image
-        run: docker push cnstark/pytorch:${IMAGE_TAG}
+        run: docker push sgccbhx/pytorch:${IMAGE_TAG}
