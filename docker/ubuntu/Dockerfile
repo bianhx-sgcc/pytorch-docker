@@ -55,3 +55,12 @@ RUN if [ ! $TORCHAUDIO_VERSION ]; \
     rm -r /root/.cache/pip
 
 WORKDIR /workspace
+
+# 安装 Jupyter 和一些常用库
+RUN pip install jupyter
+
+# 暴露 Jupyter Notebook 默认端口
+EXPOSE 8888
+
+# 启动 Jupyter Notebook，设置密码
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--no-browser", "--allow-root"]
