@@ -3,7 +3,7 @@ name: Build(2.6.0_py3.10.15_cuda12.4.0_devel_ubuntu22.04)
 env:
   BASE_IMAGE: "nvidia/cuda:12.4.0-devel-ubuntu22.04"
 
-  PYTHON_VERSION: "3.10.15"
+  PYTHON_VERSION: "3.12.11"
 
   PYTORCH_VERSION: "2.6.0"
   PYTORCH_VERSION_SUFFIX: "+cu124"
