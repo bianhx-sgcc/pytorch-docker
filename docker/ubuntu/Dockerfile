@@ -35,9 +35,8 @@ ARG PYTORCH_DOWNLOAD_URL
 
 RUN pip install torch==${PYTORCH_VERSION} \
             torchvision==${TORCHVISION_VERSION} \
-            ${TORCHAUDIO}  \
-            --index-url ${PYTORCH_DOWNLOAD_URL}; \
-    fi && \
+            torchaudio==${TORCHAUDIO_VERSION}  \
+            --index-url ${PYTORCH_DOWNLOAD_URL} && \
     rm -r /root/.cache/pip
 
 WORKDIR /workspace
